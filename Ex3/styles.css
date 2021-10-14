@@ -1,0 +1,137 @@
+/* reset d'estils navegador per evitar inconsistències entre navegadors */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+   /* color: transparent; */
+   color: transparent;
+
+}
+body > * {
+    background: #111;
+    margin-bottom: 1em;
+}
+
+.flex {display: flex;}
+
+header{
+    height: auto;
+    padding: 1em;
+}
+#header-top{
+    background: #2c3f59;
+    margin-bottom: 1em;
+
+    justify-content: space-between;
+}
+#header-top > *{
+    background: #ea5454;
+    margin: 1em;;
+}
+#top-logo{ flex:1}
+#top-nav{flex:3}
+#top-social{flex:1}
+
+#header-bot{
+    background: #e0723b;
+}
+#header-bot #header-img{
+    background: #fed45f;
+    margin: 1em;
+
+    flex: 1;
+}
+.home .container {
+    background: #ff00aa;
+    padding: 1em;
+
+    flex-direction: column;
+}
+
+
+.home main#primary {
+    background: #4d4d6a;
+    padding: 0;
+
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home #primary-articles {
+    width: 100%;
+
+    flex-wrap: wrap;
+    padding: 0 1em 0 0;
+    flex-direction: row;
+
+}
+.home article {
+    padding: 1em 0 0 1em;
+    width: 50%;
+
+
+}
+.home article .article-content {
+    background: #1e6baf;
+    min-height: 1em;
+}
+.home #primary-footer {
+    width: 100%;
+    background: #70a2c3;
+    min-height: 1em;
+    margin: 1em;
+}
+
+aside{
+    background: #f73f51;
+
+    flex: 1;
+}
+.aside-content {
+    background: #feea84;
+    margin: 1em;
+}
+
+footer{
+    padding: 1em;
+}
+footer #footer-txt{
+    background: #fed45f;
+}
+
+
+/* TABLET Portrait */
+@media only screen
+  and (min-device-width: 600px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+
+    .home .container {
+        background: #ffe500;
+        flex-direction: column;
+    }
+
+}
+
+/* desktop screens */
+@media (min-width: 56.25em) {
+    .home .container {
+        background: #111;
+        padding: 1em;
+        /*  min-height: calc(100vh - 40vh); */
+
+        flex-direction: row;
+
+      }
+
+}
